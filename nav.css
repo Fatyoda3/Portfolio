@@ -39,9 +39,13 @@ nav {
 	font-family: Roboto;
 	font-weight: bolder;
 	font-size: 1.8rem;
-	color: rgb(9, 146, 9);
-	background-color: rgb(229, 242, 157);
-	border-radius: 1rem;
+	color: transparent;
+	background-image: -moz-radial-gradient(
+		rgb(254, 174, 27),
+		rgb(252, 157, 252),
+		rgb(86, 221, 86)
+	);
+	background-clip: text;
 }
 
 .list li {
@@ -88,17 +92,14 @@ nav {
 	visibility: hidden;
 }
 
-@media screen and (max-width: 850px) {
-	body {
-		background: orange;
-	}
+@media screen and (max-width: 650px) {
 	.menu {
 		border: none;
 		padding: 10px 15px;
 		font-size: 0.8em;
 		font-weight: bolder;
 		visibility: visible;
-		/* display: block; */
+
 	}
 
 	nav:hover .list {
@@ -115,11 +116,12 @@ nav {
 		min-width: 100px;
 
 		position: absolute;
-		font-size: 0.5em;
+		font-size: 0.8em;
 		background: rgb(246, 221, 221) smoke;
 
 		box-shadow: 1px 2px 3px 2px rgb(226, 66, 66);
 	}
+
 	.list li {
 		text-align: center;
 		border-bottom: 2px solid green;
