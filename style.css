@@ -44,7 +44,7 @@ nav {
 	border-radius: 1rem;
 }
 
-.list > li {
+.list li {
 	display: inline-block;
 
 	padding: 0.3em;
@@ -72,7 +72,7 @@ nav {
 
 	color: rgba(139, 155, 201, 0.408);
 
-	transition: all 0.42s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 
 .list > li a:hover {
@@ -81,4 +81,48 @@ nav {
 	text-decoration-color: pink;
 
 	color: rgba(139, 155, 201, 0.408);
+}
+
+.menu {
+	margin: 20px;
+	visibility: hidden;
+}
+
+@media screen and (max-width: 850px) {
+	body {
+		background: orange;
+	}
+	.menu {
+		border: none;
+		padding: 10px 15px;
+		font-size: 0.8em;
+		font-weight: bolder;
+		visibility: visible;
+		/* display: block; */
+	}
+
+	nav:hover .list {
+		display: block;
+		background-color: black;
+	}
+	nav:hover .menu {
+		visibility: hidden;
+	}
+
+	.list {
+		display: none;
+
+		min-width: 100px;
+
+		position: absolute;
+		font-size: 0.5em;
+		background: rgb(246, 221, 221) smoke;
+
+		box-shadow: 1px 2px 3px 2px rgb(226, 66, 66);
+	}
+	.list li {
+		text-align: center;
+		border-bottom: 2px solid green;
+		display: block;
+	}
 }
