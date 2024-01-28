@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto&family=Ubuntu:wght@500&display=swap");
+
+:root {
+	--primary-color: salmon;
+	--secondary-color: rgba(243, 238, 238, 0.761);
+	--tertiary-color: rgba(247, 189, 189, 0.607);
+
+	--shadow-text: 2px 1px 2px black;
+}
+
+body {
+	overflow-y: scroll;
+
+	background-image: url("resources/background/bg.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: repeat-y;
+	/* overflow-x: hidden; */
+
+	/* overflow-y: hidden; */
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(2em, 1fr));
+	gap: 2em;
+	justify-content: center;
+	align-items: baseline;
+}
+
+.container > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 14em;
+	min-width: 2em;
+	min-height: 5em;
+	padding: 10px 12px;
+	margin: 2em 1em;
+	border-radius: 70px;
+	box-shadow: 2px 2px 8px grey;
+	box-sizing: border-box;
+	transition: background-color 0.1s ease-in-out, border 0.1s ease-in-out;
+	cursor: pointer;
+
+	backdrop-filter: blur(50px);
+}
+
+.container > div:hover {
+	background-color: var(--secondary-color);
+	border: 0.2em solid var(--primary-color);
+}
+
+.container > div a {
+	text-decoration: none;
+	font-size: 1.2em;
+	font-family: "Poppins";
+
+	color: rgb(250, 252, 230);
+	text-shadow: var(--shadow-text);
+}
+
+.container > div a:hover {
+	color: black;
+	text-decoration: underline;
+	text-shadow: none;
+}
+
+#container-heading {
+	font-size: 1.2em;
+	font-family: Poppins, Ubuntu, "Segoe UI", Tahoma;
+
+	text-align: center;
+	text-transform: capitalize;
+	border: 0.1em solid var(--primary-color);
+	border-radius: 70px;
+
+	border-right: none;
+	border-top: none;
+
+	min-width: 10em;
+
+	color: white;
+
+	backdrop-filter: blur(128px);
+	text-shadow: var(--shadow-text);
+}
+
+aside {
+	font-family: monospace;
+	width: 10em;
+	margin: 2em;
+	padding: 12px;
+	min-width: 5em;
+	color: rgb(214, 231, 246);
+	background-color: rgb(223, 31, 31);
+	font-size: 1em;
+	text-align: center;
+	border-radius: 5px;
+}
+
+footer ul {
+	border: 1px solid black;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+	justify-content: space-evenly;
+	align-items: flex-end;
+}
+
+footer ul li {
+	margin: 10px;
+	list-style-type: none;
+	backdrop-filter: blur(20px);
+}
+
+footer ul li a {
+	color: aqua;
+	font-family: Ubuntu, Tahoma, sans-serif;
+	text-decoration: none;
+	margin: 1em;
+}
+
+footer ul li:hover {
+	border: 1px solid black;
+	border-bottom: none;
+	border-top: none;
+
+	text-shadow: var(--shadow-text);
+}
+
+footer ul li a:visited {
+	color: greenyellow;
+}
+footer ul li img {
+	width: 50px;
+	height: 50px;
+}
+
+@media screen and (max-width: 650px) {
+	body {
+		min-width: 275px;
+	}
+	#container-heading {
+		border: 1px solid var(--primary-color);
+		margin: 10px 15px;
+		padding: 1em 1em 0.5em;
+		font-size: 0.8em;
+	}
+	.container {
+		display: flex;
+		flex-wrap: wrap-reverse;
+		justify-content: center;
+		align-items: baseline;
+		font-size: 0.8em;
+	}
+	.container > div a {
+		font-size: 1em;
+	}
+	footer ul {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+}

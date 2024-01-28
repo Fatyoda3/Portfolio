@@ -1,0 +1,24 @@
+
+span img {
+    width: 50px;
+    height: 50px;
+}
+
+span.snowFlake {
+    z-index:21;
+    width: 50px;
+    height: 50px;
+
+    animation: fall 3s ease-in 0.05s 1;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotateX(24deg);
+    }
+
+    100% {
+        transform: translateY(100px) rotateX(90deg);
+    }
+}
+

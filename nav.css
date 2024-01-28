@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto&family=Ubuntu:wght@500&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	position: sticky;
+	top: 0;
+	display: flex;
+	padding: 0.5em;
+
+	background: rgb(17, 15, 15);
+
+	color: white;
+
+	justify-content: space-between;
+	align-items: center;
+
+	z-index: 1;
+}
+
+nav {
+	display: flex;
+}
+
+.circle {
+	min-width: 1em;
+	min-height: 1em;
+	width: 3em;
+
+	height: 3em;
+
+	border-radius: 2em;
+	border: 0.2em solid white;
+
+	background-image: -moz-linear-gradient(orange, white, green);
+}
+
+.myState {
+	padding: calc(1em - 10px) 20px;
+	font-family: Roboto;
+	font-weight: bolder;
+	font-size: 1.8rem;
+	color: transparent;
+	background-image: -moz-radial-gradient(
+		rgb(254, 174, 27),
+		rgb(252, 157, 252),
+		rgb(86, 221, 86)
+	);
+	background-clip: text;
+}
+
+.list li {
+	display: inline-block;
+
+	padding: 0.3em;
+
+	font-size: 1.6em;
+
+	font-weight: bolder;
+
+	font-family: Poppins, Ubuntu, "Segoe UI", Tahoma;
+
+	background-image: -moz-repeating-linear-gradient(
+		right,
+		rgb(239, 138, 138),
+		rgb(142, 252, 142),
+		rgb(255, 216, 144)
+	);
+
+	background-clip: text;
+
+	color: rgba(67, 152, 226, 0.683);
+}
+
+.list > li a {
+	text-decoration: none;
+
+	color: rgba(139, 155, 201, 0.408);
+
+	transition: all 0.2s ease-in-out;
+}
+
+.list > li a:hover {
+	text-decoration: underline;
+
+	text-decoration-color: pink;
+
+	color: rgba(139, 155, 201, 0.408);
+}
+
+.menu {
+	margin: 20px;
+	visibility: hidden;
+}
+
+@media screen and (max-width: 650px) {
+	.menu {
+		border: none;
+		padding: 10px 15px;
+		font-size: 0.8em;
+		font-weight: bolder;
+		visibility: visible;
+	}
+
+	nav:hover .list {
+		display: block;
+		background-color: black;
+	}
+	nav:hover .menu {
+		visibility: hidden;
+	}
+
+	.list {
+		display: none;
+
+		min-width: 100px;
+
+		position: absolute;
+		font-size: 0.8em;
+		background: rgb(246, 221, 221) smoke;
+
+		box-shadow: 1px 2px 3px 2px rgb(226, 66, 66);
+	}
+
+	.list li {
+		text-align: center;
+		border-bottom: 2px solid green;
+		display: block;
+	}
+
+	.circle {
+		border-radius: 1em;
+	}
+}
+
+

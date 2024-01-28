@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<style>
+			body {
+				cursor: pointer;
+				color: white;
+				background: black;
+			}
+
+			img {
+				width: 50px;
+				height: 50px;
+			}
+
+			div.snowFlake {
+				z-index: -1;
+				width: 50px;
+				height: 50px;
+
+				background-size: cover;
+				animation: fall 3s ease-in 0.05s 1;
+			}
+
+			@keyframes fall {
+				0% {
+					transform: translateY(0) rotateX(24deg);
+				}
+
+				100% {
+					transform: translateY(100px) rotateX(90deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div><img src="snow.png" alt="#" /></div>
+
+		laudantium delectus. Quibusdam necessitatibus at rem distinctio sequi
+		nesciunt?
+	</body>
+
+	<script>
+		const body = document.body;
+		let Width = body.getBoundingClientRect().width;
+		// console.log(Math.floor(Width.toPrecision(5)));
+		document.addEventListener("click", (e) => {
+			let div = document.createElement("div");
+
+			let snowPic = document.createElement("img");
+
+			snowPic.src = "snow.png";
+
+			let l = Math.random() * (50 - 20 + 1) + 25 + "px";
+
+			snowPic.style.width = l;
+
+			snowPic.style.height = l;
+
+			div.append(snowPic);
+
+			div.classList.add("snowFlake");
+
+			div.style.position = "absolute";
+
+			div.style.backgroundImage = "snow.png";
+
+			div.style.backgroundSize = "cover";
+
+			div.style.left = e.clientX + "px";
+			div.style.top = e.clientY + "px";
+
+			body.append(div);
+
+			setTimeout(() => {
+				div.style.opacity = 0;
+				div.remove();
+			}, 2900);
+		});
+	</script>
+</html>
