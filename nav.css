@@ -35,7 +35,7 @@ nav {
 	border-radius: 2em;
 	border: 0.2em solid white;
 
-	background-image: -moz-linear-gradient(orange, white, green);
+	background-image: linear-gradient(orange, white, green);
 }
 
 .myState {
@@ -44,7 +44,7 @@ nav {
 	font-weight: bolder;
 	font-size: 1.8rem;
 	color: transparent;
-	background-image: -moz-radial-gradient(
+	background-image: radial-gradient(
 		rgb(254, 174, 27),
 		rgb(252, 157, 252),
 		rgb(86, 221, 86)
@@ -57,22 +57,24 @@ nav {
 
 	padding: 0.3em;
 
-	font-size: 1.6em;
+	font-size: 1.8em;
 
 	font-weight: bolder;
 
 	font-family: Poppins, Ubuntu, "Segoe UI", Tahoma;
 
-	background-image: -moz-repeating-linear-gradient(
-		right,
-		rgb(239, 138, 138),
-		rgb(142, 252, 142),
-		rgb(255, 216, 144)
+	
+
+	background-image: linear-gradient(
+		
+		rgb(177, 245, 221),
+		rgb(254, 136, 151) ,
+		rgb(36, 220, 12)
 	);
 
 	background-clip: text;
 
-	color: rgba(67, 152, 226, 0.683);
+	color: transparent;
 }
 
 .list > li a {
@@ -135,5 +137,3 @@ nav {
 		border-radius: 1em;
 	}
 }
-
-
