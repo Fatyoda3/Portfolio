@@ -17,6 +17,8 @@ header {
 
 	justify-content: space-between;
 	align-items: center;
+
+	z-index: 1;
 }
 
 nav {
@@ -24,6 +26,8 @@ nav {
 }
 
 .circle {
+	min-width: 1em;
+	min-height: 1em;
 	width: 3em;
 
 	height: 3em;
@@ -99,7 +103,6 @@ nav {
 		font-size: 0.8em;
 		font-weight: bolder;
 		visibility: visible;
-
 	}
 
 	nav:hover .list {
@@ -127,4 +130,10 @@ nav {
 		border-bottom: 2px solid green;
 		display: block;
 	}
+
+	.circle {
+		border-radius: 1em;
+	}
 }
+
+

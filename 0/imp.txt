@@ -1,0 +1,72 @@
+/* "use strict";
+const body = document.body;
+
+let myInterval = setInterval(() => {
+	for (let i = 0; i < 2; i++) {
+		let div = document.createElement("span");
+		div.classList.add("snowFlake");
+		body.append(div);
+		div.style.position = "absolute";
+		div.style.zIndex = "-1";
+		div.style.width = "10px";
+		div.style.height = "20px";
+		//div.style.backgroundColor = "white";
+		div.style.top = `${Math.random() * 500}px`;
+		div.style.left = `${Math.random() * 1000}px`;
+		div.style.borderRadius = "70px";
+        div.style.backgroundImage = "snow.png";
+	}
+}, 300);
+
+let clearMyInterval = setInterval(() => {
+	let removeDiv = document.querySelector(".snowFlake");
+	removeDiv.remove();
+}, 320);
+
+setTimeout(() => {
+	clearInterval(clearMyInterval);
+	clearInterval(myInterval);
+}, 60 * 1000);
+ */
+
+// let date = new Date()
+// console.log(date);
+// async function cleanKitchen() {
+// 	return new Promise((c, r) => {
+// 		setTimeout(() => {
+// 			console.log("cleaned 1");
+// 		}, 12000);
+// 		c();
+// 	});
+// }
+
+// async function cleanKitchen2() {
+// 	return new Promise((resolve, reject) => {
+// 		setTimeout(() => {
+// 			console.log("cleaned 2 ");
+// 		},2000);
+// 		resolve();
+// 	});
+// }
+
+// async function cleanKitchen3() {
+// 	return new Promise((c, r) => {
+// 		setTimeout(() => {
+// 			console.log("cleaned 3");
+// 		}, 2000);
+// 		r("hell it's here");
+// 	});
+// }
+
+// async function cleanAllKitchen() {
+// 	await cleanKitchen();
+// 	await cleanKitchen2();
+// 	await cleanKitchen3();
+// }
+
+// cleanAllKitchen()
+// 	.then()
+// 	.catch((e) => {
+// 		console.log(e);
+// 		//throw e;
+// 	});
