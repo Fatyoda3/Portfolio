@@ -9,7 +9,8 @@
 }
 
 body {
-	overflow-y: scroll;
+	overflow:hidden scroll;
+
 
 	background-image: url("resources/background/bg.jpg");
 	background-position: center;
@@ -102,12 +103,15 @@ aside {
 }
 
 footer ul {
+	position: relative;;
 	border: 1px solid black;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 10px;
+	
 	justify-content: space-evenly;
+
 	align-items: flex-end;
+bottom: 0;
 }
 
 footer ul li {
@@ -157,6 +161,9 @@ footer ul li img {
 		font-size: 0.8em;
 	}
 	.container > div a {
+		color: black;
+		font-weight: 900;
+		text-shadow: none;
 		font-size: 1em;
 	}
 	footer ul {

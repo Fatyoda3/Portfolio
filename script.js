@@ -35,7 +35,8 @@
 
 const body = document.body;
 
-document.addEventListener("click", (e) => {
+body.addEventListener("click", (e) => {
+	
 	let snow = document.createElement("span");
 
 	let snowPic = document.createElement("img");
